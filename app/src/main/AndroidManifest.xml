@@ -10,9 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeamNull_SeedBlends_2022">
         <activity
+            android:name=".Field"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity
+            android:name=".Tracking"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+        <activity
             android:name=".Login"
-            android:name=".Documentation"
             android:exported="false" />
+        <activity
+            android:name=".Documentation"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
