@@ -5,10 +5,10 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     tools:context=".MainActivity">
-
     <Button
         android:id="@+id/begin_tracking"
         android:layout_width="wrap_content"
+        android:onClick="launchTrackingPage"
         android:layout_height="48dp"
         android:layout_marginStart="150dp"
         android:layout_marginTop="100dp"
@@ -24,6 +24,7 @@
         android:id="@+id/field_data"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
+        android:onClick="launchFieldPage"
         android:layout_marginStart="150dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="150dp"
@@ -38,6 +39,7 @@
         android:id="@+id/documentation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="launchDocumentationPage"
         android:layout_marginStart="150dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="150dp"

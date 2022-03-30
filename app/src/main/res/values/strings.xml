@@ -18,5 +18,10 @@
     <string name="textSubheaderTracking">Make sure Bluetooth is On</string>
     <string name="begin_tracking">tracking_HomePage</string>
     <string name="field_data">field_HomePage</string>
-
+    <string name="app_name">TeamNull_SeedBlends_2022</string>
+    <string name="sign_in">Sign In</string>
+    <string name="username">Username</string>
+    <string name="Password">Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="log_in">Log in</string>
 </resources>
