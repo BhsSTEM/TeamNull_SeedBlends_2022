@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".signUpScreen">
 
     <ImageView
         android:id="@+id/imageView"
@@ -29,12 +29,12 @@
         app:layout_constraintVertical_bias="0.067" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/signUp1"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="244dp"
         android:autofillHints="username"
-        android:hint="@string/username"
+        android:hint="Enter Username"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -42,11 +42,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/signUp2"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="308dp"
-        android:hint="@string/Password"
+        android:hint="Enter Password"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/signUp3"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="368dp"
+        android:hint="Enter Email"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -54,31 +67,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/signInButton"
-        android:onClick="launchSignUpScreen"
+        android:id="@+id/signUpButton1"
+        android:onClick="launchMainScreen"
         android:layout_width="125dp"
         android:layout_height="50dp"
-        android:layout_marginTop="408dp"
+        android:layout_marginTop="520dp"
         android:backgroundTint="#000000"
         android:text="@string/sign_up"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.192"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/logInButton"
-        android:onClick="launchMainScreen"
-        android:layout_width="125sp"
-        android:layout_height="50dp"
-        android:layout_marginTop="408dp"
-        android:backgroundTint="#000000"
-        android:text="@string/log_in"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.832"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
