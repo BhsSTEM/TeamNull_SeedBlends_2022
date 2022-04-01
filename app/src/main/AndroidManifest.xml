@@ -6,7 +6,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/appName"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TeamNull_SeedBlends_2022">
@@ -16,21 +16,23 @@
             android:value="AIzaSyBHFj8ds3QYAr0c2fGy1xc8SZ_HNlrJlxs" />
 
         <activity
-            android:name=".Field"
-            android:exported="false"
-            android:parentActivityName=".MainActivity"/>
-
-        <activity
-            android:name=".Tracking"
-            android:exported="false"
-            android:parentActivityName=".MainActivity"/>
-        <activity
-            android:name=".Login"
+            android:name=".signUpScreen"
             android:exported="false" />
         <activity
-            android:name=".Documentation"
+            android:name=".Field"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Tracking"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Login"
+            android:exported="true" />
+        <activity
+            android:name=".Documentation"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

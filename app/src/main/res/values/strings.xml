@@ -1,11 +1,27 @@
 <resources>
+    <string name="appName">TeamNull_SeedBlends_2022</string>
+    <string name="beginTracking">Begin Tracking</string>
+    <string name="fieldData">Field Data</string>
+    <string name="documentation">Documentation</string>
+    <string name="fieldOne">Field One</string>
+    <string name="fieldTwo">Field Two</string>
+    <string name="fieldThree">Field Three</string>
+    <string name="newField">Go to Tracking Tab</string>
+    <string name="homeButton">Back to Home</string>
+    <string name="textHeaderField">Choose a Field to View</string>
+    <string name="homeButtonTracking">Back to home</string>
+    <string name="newDevice">Add a New Device</string>
+    <string name="deviceOne">Device One</string>
+    <string name="deviceTwo">Device Two</string>
+    <string name="deviceThree">Device Three</string>
+    <string name="textHeaderTracking">Select a Device to Pair</string>
+    <string name="textSubheaderTracking">Make sure Bluetooth is On</string>
+    <string name="begin_tracking">tracking_HomePage</string>
+    <string name="field_data">field_HomePage</string>
     <string name="app_name">TeamNull_SeedBlends_2022</string>
     <string name="sign_in">Sign In</string>
     <string name="username">Username</string>
     <string name="Password">Password</string>
     <string name="sign_up">Sign Up</string>
     <string name="log_in">Log in</string>
-    <string name="begin_tracking">Begin Tracking</string>
-    <string name="field_data">Field Data</string>
-    <string name="documentation">Documentation</string>
 </resources>
