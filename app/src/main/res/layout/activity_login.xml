@@ -29,12 +29,13 @@
         app:layout_constraintVertical_bias="0.067" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/signInEmail"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="244dp"
-        android:autofillHints="username"
-        android:hint="@string/username"
+        android:maxLines="1"
+        android:autofillHints="Email"
+        android:hint="Email"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -42,10 +43,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/signInPassword"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="308dp"
+        android:maxLines="1"
         android:hint="@string/Password"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
