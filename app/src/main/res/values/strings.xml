@@ -6,7 +6,7 @@
     <string name="fieldOne">Field One</string>
     <string name="fieldTwo">Field Two</string>
     <string name="fieldThree">Field Three</string>
-    <string name="newField">Go to Tracking Tab</string>
+    <string name="newField">Add New Field</string>
     <string name="homeButton">Back to Home</string>
     <string name="textHeaderField">Choose a Field to View</string>
     <string name="homeButtonTracking">Back to home</string>
