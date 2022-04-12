@@ -1,37 +1,73 @@
 package com.example.teamnull_seedblends_2022;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
 
-public class Field extends AppCompatActivity implements OnMapReadyCallback {
+import java.util.ArrayList;
+import java.util.Arrays;
 
-    private GoogleMap mMap;
+public class Field extends AppCompatActivity {
+
+    ListView listView;
+    EditText field_name;
+    EditText field_coords;
+    Button button;
+    ArrayList<FieldItem> list = new ArrayList<>();
+    ArrayAdapter<FieldItem> adapter;
+    String inputText;
+    String inputCoords;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_field);
 
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
+        button = findViewById(R.id.new_field);
+        listView = findViewById(R.id.list);
+        field_name = findViewById(R.id.enter_field_name);
+        field_coords = findViewById(R.id.enter_coordinates);
+
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list);
+        View.OnClickListener onClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inputText = field_name.getText().toString();
+                inputCoords = field_coords.getText().toString();
+                FieldItem item = new FieldItem(inputText, inputCoords);
+                list.add(item);
+                field_name.setText("");
+                field_coords.setText("");
+                adapter.notifyDataSetChanged();
+            }
+        };
+
+        Intent intent = new Intent(this, FieldInfo.class);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                intent.putExtra("field_name", inputText);
+                intent.putExtra("field_coords", inputCoords);
+                startActivity(intent);
+            }
+        });
+
+        button.setOnClickListener(onClickListener);
+        listView.setAdapter(adapter);
+
+
     }
 
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions()
-                .position(sydney)
-                .title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-        mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+    public void launchFieldInfoPage(View view) {
+        Intent intent = new Intent(this, FieldInfo.class);
+        intent.putExtra("id", view.getId());
+        startActivity(intent);
     }
 }
