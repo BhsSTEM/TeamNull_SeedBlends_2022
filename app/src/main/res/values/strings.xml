@@ -15,7 +15,7 @@
     <string name="deviceTwo">Device Two</string>
     <string name="deviceThree">Device Three</string>
     <string name="textHeaderTracking">Select a Device to Pair</string>
-    <string name="textSubheaderTracking">Make sure Bluetooth is On</string>
+    <string name="textSubHeaderTracking">Make sure Bluetooth is On</string>
     <string name="begin_tracking">tracking_HomePage</string>
     <string name="field_data">field_HomePage</string>
     <string name="app_name">TeamNull_SeedBlends_2022</string>
