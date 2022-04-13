@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "496999170634",
-    "project_id": "docu-seed-415c3",
-    "storage_bucket": "docu-seed-415c3.appspot.com"
+    "project_number": "586970558370",
+    "firebase_url": "https://docu-seed-3fee1-default-rtdb.firebaseio.com",
+    "project_id": "docu-seed-3fee1",
+    "storage_bucket": "docu-seed-3fee1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:496999170634:android:2eecf2fec2ef36119e5cb3",
+        "mobilesdk_app_id": "1:586970558370:android:fb976492a711118cd04cfb",
         "android_client_info": {
           "package_name": "com.example.teamnull_seedblends_2022"
         }
       },
       "oauth_client": [
         {
-          "client_id": "496999170634-0aglr2vvt5nivbu6tq54i82e9e6jrv3e.apps.googleusercontent.com",
+          "client_id": "586970558370-3sqkqpja1q9nrhjirdoucqt8ptrh60vn.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDyAt8-Fo5di9y6mtxPp4DNCFA_mo8IsAM"
+          "current_key": "AIzaSyD1hA5kkXtJiQ1zO9i3WXarsEgrIAWIsl4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "496999170634-0aglr2vvt5nivbu6tq54i82e9e6jrv3e.apps.googleusercontent.com",
+              "client_id": "586970558370-3sqkqpja1q9nrhjirdoucqt8ptrh60vn.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

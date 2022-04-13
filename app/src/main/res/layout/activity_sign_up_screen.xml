@@ -15,10 +15,10 @@
         tools:layout_editor_absoluteY="-16dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/banner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sign_in"
+        android:text="Register"
         android:textColor="@color/black"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,12 +29,12 @@
         app:layout_constraintVertical_bias="0.067" />
 
     <EditText
-        android:id="@+id/signUp1"
+        android:id="@+id/registerName"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="244dp"
-        android:autofillHints="username"
-        android:hint="Enter Username"
+        android:autofillHints="Name"
+        android:hint="Enter Name"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -42,7 +42,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/signUp2"
+        android:id="@+id/registerPassword"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="308dp"
@@ -55,7 +55,7 @@
 
 
     <EditText
-        android:id="@+id/signUp3"
+        android:id="@+id/registerEmail"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="368dp"
@@ -67,15 +67,25 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/signUpButton1"
-        android:onClick="launchMainScreen"
-        android:layout_width="125dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="520dp"
+        android:id="@+id/registerButton"
+        android:layout_width="156dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="456dp"
         android:backgroundTint="#000000"
-        android:text="@string/sign_up"
+        android:text="Register"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/registerProgressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="568dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
