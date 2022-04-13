@@ -20,6 +20,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class Login extends AppCompatActivity implements View.OnClickListener{
@@ -103,7 +104,14 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     // This is where we Redirect to user profile
-                    startActivity(new Intent(Login.this, MainActivity.class));
+                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+                    if(user.isEmailVerified()){
+                        startActivity(new Intent(Login.this, MainActivity.class));
+                    }else{
+                        user.sendEmailVerification();
+                        Toast.makeText(Login.this, "Check your account", Toast.LENGTH_SHORT).show();
+                    }
 
                 }else{
                     Toast.makeText(Login.this, "Failed to login! Please try again!", Toast.LENGTH_SHORT).show();
