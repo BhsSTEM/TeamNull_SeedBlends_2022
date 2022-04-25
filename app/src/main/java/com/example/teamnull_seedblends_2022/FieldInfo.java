@@ -2,8 +2,12 @@ package com.example.teamnull_seedblends_2022;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -21,6 +25,13 @@ public class FieldInfo extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     TextView title;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.nav_menu, menu);
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,22 +52,29 @@ public class FieldInfo extends AppCompatActivity implements OnMapReadyCallback {
 
         ArrayList<String> coords = new ArrayList<String>(Arrays.asList(getIntent().getExtras().getString("field_coords").split(",")));
 
-
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        LatLngBounds latlongbounds;
-
-        latlongbounds = new LatLngBounds(
+        LatLngBounds bounds = new LatLngBounds(
                 new LatLng(Double.parseDouble(coords.get(0)),Double.parseDouble(coords.get(2))),
                 new LatLng(Double.parseDouble(coords.get(1)),Double.parseDouble(coords.get(3)))
         );
 
-        mMap.addMarker(new MarkerOptions()
-                .position(sydney)
-                .title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(latlongbounds, 0));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, 0));
 //        mMap.animateCamera(CameraUpdateFactory.zoomTo(10), 5000, null);
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+    }
+
+    public void launchTrackingPage(MenuItem item) {
+        Intent intent = new Intent(this, Tracking.class);
+        startActivity(intent);
+    }
+
+    public void launchFieldPage(MenuItem item) {
+        Intent intent = new Intent(this, Field.class);
+        startActivity(intent);
+    }
+
+    public void launchDocumentationPage(MenuItem item) {
+        Intent intent = new Intent(this, Documentation.class);
+        startActivity(intent);
     }
 
 
