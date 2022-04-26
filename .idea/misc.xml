@@ -4,6 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.12239583333333333" />
+<<<<<<< HEAD
+        <entry key="app/src/main/res/layout/activity_documentation.xml" value="0.18394989013671872" />
+        <entry key="app/src/main/res/layout/activity_field.xml" value="0.3523864746093752" />
+        <entry key="app/src/main/res/layout/activity_field_info.xml" value="0.36283111572265625" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22952728271484377" />
+        <entry key="app/src/main/res/layout/activity_sign_up_screen.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/activity_tracking.xml" value="0.240625" />
+        <entry key="app/src/main/res/layout/toolbar.xml" value="0.4951020137396507" />
+        <entry key="app/src/main/res/menu/nav_menu.xml" value="0.10989583333333333" />
+        <entry key="app/src/main/res/menu/test_item.xml" value="0.24270833333333333" />
+=======
         <entry key="..\:/Users/150371/StudioProjects/TeamNull_SeedBlends_2022/app/src/main/res/layout/activity_login.xml" value="0.3260416666666667" />
         <entry key="..\:/Users/150371/StudioProjects/TeamNull_SeedBlends_2022/app/src/main/res/layout/activity_main.xml" value="0.3260416666666667" />
         <entry key="..\:/Users/150371/StudioProjects/TeamNull_SeedBlends_2022/app/src/main/res/layout/activity_sign_up_screen.xml" value="0.20380434782608695" />
@@ -16,6 +28,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/activity_sign_up_screen.xml" value="0.3080686976965196" />
         <entry key="app/src/main/res/layout/activity_tracking.xml" value="0.3098958333333333" />
+>>>>>>> 9cd9ffe9ab5a3518e435aafa508d8f3850f36b3e
       </map>
     </option>
   </component>

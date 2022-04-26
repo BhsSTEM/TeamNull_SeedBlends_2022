@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_tracking_link"
+        android:title="Tracking"
+        app:showAsAction="collapseActionView"
+        android:onClick="launchTrackingPage" />
+
+    <item
+        android:id="@+id/nav_field_link"
+        android:title="Field"
+        app:showAsAction="collapseActionView"
+        android:onClick="launchFieldPage" />
+
+    <item
+        android:id="@+id/nav_documentation_link"
+        android:title="Documentation"
+        app:showAsAction="collapseActionView"
+        android:onClick="launchDocumentationPage" />
+</menu>
