@@ -6,7 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.accounts.Account;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.textservice.TextInfo;
 import android.widget.Button;
@@ -29,6 +32,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     private EditText signInEmail, signInPassword;
     private Button logInButton;
     private ProgressBar signInProgressBar;
+    boolean passwordVisible;
     // This is got the google fire base login System
     private FirebaseAuth mAuth;
     //This is got the google fire base login System
@@ -42,7 +46,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
         register = (TextView) findViewById(R.id.register);
             register.setOnClickListener(this);
-// DONT TOUCH THIS
+
 
         logInButton = (Button) findViewById(R.id.logInButton);
             logInButton.setOnClickListener(this);
@@ -50,6 +54,33 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
         signInEmail = (EditText) findViewById(R.id.signInEmail);
             signInPassword = (EditText) findViewById(R.id.signInPassword);
+            signInPassword.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    final int Right=2;
+                    if(event.getAction() == MotionEvent.ACTION_UP){
+                        if(event.getRawX() >= signInPassword.getRight()-signInPassword.getCompoundDrawables()[Right].getBounds().width()){
+                            int selection =signInPassword.getSelectionEnd();
+                            if(passwordVisible){
+                                //set drawable image here
+                                signInPassword.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_visibility_off_24, 0 );
+                                //hide
+                                signInPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                                passwordVisible = false;
+                            }else{
+                                signInPassword.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_visibility_24, 0 );
+                                //hide
+                                signInPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                                passwordVisible = true;
+                            }
+                            signInPassword.setSelection(selection);
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+            });
+
                     // This is for the Password and Email
         signInProgressBar = (ProgressBar) findViewById(R.id.signInProgressBar);
 
@@ -118,7 +149,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                         startActivity(new Intent(Login.this, MainActivity.class));
                     }else{
                         user.sendEmailVerification();
-                        Toast.makeText(Login.this, "Check your account", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this, "Check email! Then log back in!", Toast.LENGTH_SHORT).show();
                     }
 
                 }else{

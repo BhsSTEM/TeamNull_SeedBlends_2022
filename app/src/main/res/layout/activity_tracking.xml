@@ -14,6 +14,8 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="20dp"
         android:text="@string/homeButtonTracking"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/new_Device"
         app:layout_constraintStart_toStartOf="parent" />
@@ -26,6 +28,8 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:text="@string/newDevice"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/home_ButtonTracking" />
@@ -38,6 +42,8 @@
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="20dp"
         android:text="@string/deviceOne"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/device_two"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -50,6 +56,8 @@
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="20dp"
         android:text="@string/deviceTwo"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/device_Three"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -62,6 +70,8 @@
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="333dp"
         android:text="@string/deviceThree"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
