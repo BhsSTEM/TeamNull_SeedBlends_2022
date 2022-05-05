@@ -71,8 +71,6 @@ public class Field extends AppCompatActivity {
 
         button.setOnClickListener(onClickListener);
         listView.setAdapter(adapter);
-
-
     }
 
     public void launchFieldInfoPage(View view) {

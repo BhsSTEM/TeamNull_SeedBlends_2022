@@ -10,110 +10,87 @@
         android:id="@+id/enter_coordinates"
         android:layout_width="210dp"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
         android:hint="Four comma separated numbers"
         android:inputType="text"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/enter_field_name"
-        app:layout_constraintTop_toBottomOf="@+id/enter_field_name" />
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="877dp" />
 
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/new_field"
+        app:layout_constraintBottom_toTopOf="@+id/home_ButtonField"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enter_coordinates"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/enter_field_name"
         android:layout_width="210dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
         android:hint="Enter an item here"
         android:inputType="text"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_HeaderField" />
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="817dp" />
 
     <Button
         android:id="@+id/new_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="57dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
         android:text="@string/newField"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/home_ButtonField" />
+        tools:layout_editor_absoluteX="240dp"
+        tools:layout_editor_absoluteY="663dp" />
 
     <Button
         android:id="@+id/home_ButtonField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="243dp"
-        android:layout_marginBottom="20dp"
         android:text="@string/homeButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="663dp" />
 
     <TextView
         android:id="@+id/text_HeaderField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="34dp"
         android:text="@string/textHeaderField"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="752dp" />
 
     <TextView
         android:id="@+id/enter_field_name_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="60dp"
         android:text="Field Name"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/enter_field_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_HeaderField" />
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="837dp" />
 
     <TextView
         android:id="@+id/enter_coordinates_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:text="Enter coordinates"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/enter_field_name_label"
-        app:layout_constraintTop_toBottomOf="@+id/enter_field_name_label" />
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="877dp" />
 
     <TextView
         android:id="@+id/coords_label_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:text="NE lat, SW lat, NE long, SW long"
         android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="@+id/enter_coordinates_label"
-        app:layout_constraintStart_toStartOf="@+id/enter_coordinates_label"
-        app:layout_constraintTop_toBottomOf="@+id/enter_coordinates_label" />
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="901dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

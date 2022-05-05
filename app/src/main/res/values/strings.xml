@@ -1,5 +1,5 @@
 <resources>
-    <string name="appName">TeamNull_SeedBlends_2022</string>
+    <string name="appName">DocuSeed</string>
     <string name="beginTracking">Begin Tracking</string>
     <string name="fieldData">Field Data</string>
     <string name="documentation">Documentation</string>
@@ -18,7 +18,7 @@
     <string name="textSubHeaderTracking">Make sure Bluetooth is On</string>
     <string name="begin_tracking">tracking_HomePage</string>
     <string name="field_data">field_HomePage</string>
-    <string name="app_name">TeamNull_SeedBlends_2022</string>
+    <string name="app_name">DocuSeed</string>
     <string name="sign_in">Sign In</string>
     <string name="username">Username</string>
     <string name="Password">Password</string>

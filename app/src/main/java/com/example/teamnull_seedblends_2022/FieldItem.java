@@ -1,7 +1,5 @@
 package com.example.teamnull_seedblends_2022;
 
-import java.util.ArrayList;
-
 public class FieldItem {
     private String name;
     private String coords;
