@@ -1,6 +1,8 @@
 package com.example.teamnull_seedblends_2022;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,13 +10,69 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+import java.util.ArrayList;
 
 public class Documentation extends AppCompatActivity {
+
+    private ArrayList<DocumentationCard> mDocumentationList;
+
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
+
+    private Button buttonInsert;
+    private EditText associatedFieldEditText;
+    private EditText dateEditText;
+    private EditText documentationEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_documentation);
+
+        createDocumentationList();
+        buildRecyclerView();
+
+        buttonInsert = findViewById(R.id.insert_documentation);
+        associatedFieldEditText = findViewById(R.id.associatedFieldEditText);
+        dateEditText = findViewById(R.id.dateEditText);
+        documentationEditText = findViewById(R.id.documentationEditText);
+
+        buttonInsert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                insertItem(associatedFieldEditText.getText().toString(), dateEditText.getText().toString(), documentationEditText.getText().toString());
+
+                associatedFieldEditText.setText("");
+                dateEditText.setText("");
+                documentationEditText.setText("");
+            }
+        });
+    }
+
+    public void insertItem(String af, String dt, String doc) {
+        mDocumentationList.add(new DocumentationCard(af, dt, doc));
+        mAdapter.notifyItemInserted(mDocumentationList.size()-1);
+    }
+
+    public void createDocumentationList() {
+        mDocumentationList = new ArrayList<>();
+//        mDocumentationList.add(new DocumentationCard("", "Line 1", "Line 2"));
+//        mDocumentationList.add(new DocumentationCard("", "Line 3", "Line 4"));
+//        mDocumentationList.add(new DocumentationCard("", "Line 5", "Line 6"));
+    }
+
+    public void buildRecyclerView() {
+        mRecyclerView = findViewById(R.id.recyclerView);
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(this);
+        mAdapter = new DocumentationAdapter(mDocumentationList);
+
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setAdapter(mAdapter);
     }
 
     @Override
