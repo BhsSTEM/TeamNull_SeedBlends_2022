@@ -5,17 +5,6 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="30dp"
-        android:layout_height="34dp"
-        app:layout_constraintBottom_toBottomOf="@+id/search_documentation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.262"
-        app:layout_constraintStart_toEndOf="@+id/search_documentation"
-        app:layout_constraintTop_toTopOf="@+id/search_documentation"
-        app:layout_constraintVertical_bias="1.0" />
-
     <EditText
         android:id="@+id/search_documentation"
         android:layout_width="310dp"
@@ -91,4 +80,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/associatedFieldEditText"
         app:layout_constraintTop_toTopOf="@+id/associatedFieldEditText" />
+
+    <ImageView
+        android:id="@+id/searchView"
+        android:layout_width="34dp"
+        android:layout_height="33dp"
+        app:layout_constraintBottom_toBottomOf="@+id/search_documentation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/search_documentation"
+        app:layout_constraintTop_toTopOf="@+id/search_documentation"
+        app:srcCompat="@drawable/ic_baseline_search_24"
+        android:onClick="filterList" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,7 +14,6 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity
 {
-
 // This is for the certain classes in the XML code
 
     @Override
@@ -33,6 +32,8 @@ public class MainActivity extends AppCompatActivity
 
 
     }
+
+
 
     public void launchTrackingPage(View view) {
         Intent intent = new Intent(this, Tracking.class);

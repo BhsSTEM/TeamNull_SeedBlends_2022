@@ -14,13 +14,14 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class Documentation extends AppCompatActivity {
 
     private ArrayList<DocumentationCard> mDocumentationList;
 
     private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
+    private DocumentationAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
     private Button buttonInsert;
@@ -95,5 +96,10 @@ public class Documentation extends AppCompatActivity {
     public void launchDocumentationPage(MenuItem item) {
         Intent intent = new Intent(this, Documentation.class);
         startActivity(intent);
+    }
+
+    public void filterList(View view) {
+        String filterPattern = ((EditText) findViewById(R.id.search_documentation)).getText().toString().toLowerCase().trim();
+        mAdapter.getFilter().filter(filterPattern);
     }
 }
