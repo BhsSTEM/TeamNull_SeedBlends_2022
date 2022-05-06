@@ -10,7 +10,7 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@color/purple_200"
+        android:src="@color/white"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
 
@@ -28,33 +28,39 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.067" />
 
-    <EditText
-        android:id="@+id/signInEmail"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="244dp"
-        android:maxLines="1"
-        android:autofillHints="Email"
-        android:hint="Email"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/signInPassword"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="308dp"
-        android:maxLines="1"
         android:hint="@string/Password"
+        android:maxLines="1"
+        android:drawableRight="@drawable/ic_baseline_visibility_off_24"
+        android:inputType="textPassword"
         android:textColorHint="@color/black"
+        android:paddingRight="10dp"
+        android:longClickable="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <EditText
+        android:id="@+id/signInEmail"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="256dp"
+        android:hint="Email"
+        android:maxLines="1"
+        android:textColorHint="@color/black"
+        android:paddingLeft="10dp"
+        android:longClickable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/register"
@@ -62,13 +68,14 @@
         android:layout_height="31dp"
         android:layout_marginTop="372dp"
         android:text="Register"
+        android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.904"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/forgotPassword"
@@ -76,9 +83,9 @@
         android:layout_height="32dp"
         android:layout_marginTop="372dp"
         android:text="Forgot Password"
+        android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.127"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,12 +98,14 @@
         android:layout_marginTop="448dp"
         android:backgroundTint="#000000"
         android:onClick="launchMainScreen"
-        android:text="@string/log_in"
+        android:text="Log In"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <ProgressBar
         android:id="@+id/signInProgressBar"
@@ -108,4 +117,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
