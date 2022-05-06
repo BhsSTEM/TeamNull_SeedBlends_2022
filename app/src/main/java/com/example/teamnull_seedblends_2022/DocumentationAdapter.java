@@ -3,15 +3,19 @@ package com.example.teamnull_seedblends_2022;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class DocumentationAdapter extends RecyclerView.Adapter<DocumentationAdapter.DocumentationViewHolder> {
+public class DocumentationAdapter extends RecyclerView.Adapter<DocumentationAdapter.DocumentationViewHolder> implements Filterable {
     private ArrayList<DocumentationCard> mDocumentationList;
+    private ArrayList<DocumentationCard> mDocumentationListFull;
 
     @NonNull
     @Override
@@ -23,6 +27,7 @@ public class DocumentationAdapter extends RecyclerView.Adapter<DocumentationAdap
 
     public DocumentationAdapter(ArrayList<DocumentationCard> documentationList) {
         mDocumentationList = documentationList;
+        mDocumentationListFull = new ArrayList<>(documentationList);
     }
 
     @Override
@@ -51,4 +56,40 @@ public class DocumentationAdapter extends RecyclerView.Adapter<DocumentationAdap
             documentation = itemView.findViewById(R.id.documentationText);
         }
     }
+
+    @Override
+    public Filter getFilter() {
+        return documentation_filter;
+    }
+
+    private Filter documentation_filter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            List<DocumentationCard> filteredList = new ArrayList<>();
+
+            if (constraint == null || constraint.length() == 0) {
+                filteredList.addAll(mDocumentationListFull);
+            } else {
+                String filterPattern = constraint.toString().toLowerCase().trim();
+
+                for (DocumentationCard item : mDocumentationListFull) {
+                    if (item.getDocumentation().toLowerCase().contains(filterPattern)) {
+                        filteredList.add(item);
+                    }
+                }
+            }
+
+            FilterResults results = new FilterResults();
+            results.values = filteredList;
+
+            return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            mDocumentationList.clear();
+            mDocumentationList.addAll((List) results.values);
+            notifyDataSetChanged();
+        }
+    };
 }
