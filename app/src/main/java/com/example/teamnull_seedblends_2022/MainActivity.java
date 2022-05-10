@@ -64,4 +64,9 @@ public class MainActivity extends AppCompatActivity
         Intent intent = new Intent(this, Documentation.class);
         startActivity(intent);
     }
+    public void launchUserProfile(View view) {
+        Intent intent = new Intent(MainActivity.this, userdisplay.class);
+        startActivity(intent);
+        // This will launch the user profile
+    }
 }
