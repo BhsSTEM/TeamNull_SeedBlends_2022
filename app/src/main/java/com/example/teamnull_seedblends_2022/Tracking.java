@@ -20,6 +20,9 @@ public class Tracking extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_logo_foreground);
+
         setContentView(R.layout.activity_tracking);
     }
 

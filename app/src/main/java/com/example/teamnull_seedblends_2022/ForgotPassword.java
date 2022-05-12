@@ -3,6 +3,7 @@ package com.example.teamnull_seedblends_2022;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -23,6 +24,7 @@ public class ForgotPassword extends AppCompatActivity {
 private EditText emailEditText;
 private Button resetPasswordButton;
 private ProgressBar progressBar;
+private TextView goToLoginPage;
 
 FirebaseAuth auth;
 
@@ -36,6 +38,14 @@ FirebaseAuth auth;
         emailEditText = (EditText) findViewById(R.id.email);
         resetPasswordButton = (Button) findViewById(R.id.resetPassword);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
+        goToLoginPage = (TextView) findViewById(R.id.goToLoginPage);
+        goToLoginPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ForgotPassword.this, Login.class));
+            }
+        });
 
         auth = FirebaseAuth.getInstance();
 
