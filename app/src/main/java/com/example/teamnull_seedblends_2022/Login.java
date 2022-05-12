@@ -159,4 +159,14 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         });
 
     }
+
+    public void openRegisterPage(View view) {
+        Intent intent = new Intent(this, signUpScreen.class);
+        startActivity(intent);
+    }
+
+    public void openForgotPasswordPage(View view) {
+        Intent intent = new Intent(this, ForgotPassword.class);
+        startActivity(intent);
+    }
 }

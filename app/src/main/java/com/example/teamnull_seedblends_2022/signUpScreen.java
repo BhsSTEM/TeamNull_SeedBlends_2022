@@ -25,7 +25,7 @@ import org.w3c.dom.Text;
 public class signUpScreen extends AppCompatActivity implements View.OnClickListener{
 
     private FirebaseAuth mAuth;
-    private TextView banner;
+    private TextView banner, goToLoginPage;
     private EditText registerName, registerPassword, registerEmail;
     private Button registerButton;
     private ProgressBar registerProgressBar;
@@ -33,11 +33,21 @@ public class signUpScreen extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_sign_up_screen);
         mAuth = FirebaseAuth.getInstance();
 
         banner = (TextView) findViewById(R.id.banner);
         banner.setOnClickListener(this);
+
+        goToLoginPage = (TextView) findViewById(R.id.goToLoginPage);
+        goToLoginPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(signUpScreen.this, Login.class));
+            }
+        });
+
         // This is for the "Register" Banner for the user to go back to the home screen
         registerButton = (Button) findViewById(R.id.registerButton);
         registerButton.setOnClickListener(this);

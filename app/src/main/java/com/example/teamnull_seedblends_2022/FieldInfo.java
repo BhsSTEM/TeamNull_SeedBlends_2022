@@ -36,6 +36,9 @@ public class FieldInfo extends AppCompatActivity implements OnMapReadyCallback {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_logo_foreground);
+
         setContentView(R.layout.activity_field_info);
 
         String name = getIntent().getExtras().getString("field_name");
