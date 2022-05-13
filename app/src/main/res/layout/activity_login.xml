@@ -6,28 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".Login">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@color/white"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
 
-    <TextView
-        android:id="@+id/signIn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Docu Seed"
-        android:textColor="@color/black"
-        android:textSize="50sp"
+    <ImageView
+        android:layout_width="172dp"
+        android:layout_height="175dp"
+        android:src="@drawable/docuseedlogo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.067" />
+        app:layout_constraintVertical_bias="0.079"
 
+        />
 
     <EditText
         android:id="@+id/signInPassword"
@@ -69,6 +60,7 @@
         android:layout_height="31dp"
         android:layout_marginTop="548dp"
         android:hint="New User? Click here to register"
+        android:textColorHint="@color/black"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
