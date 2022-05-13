@@ -45,7 +45,7 @@ public class userdisplay extends AppCompatActivity {
       });
 
 
-        getSupportActionBar().setTitle("Home");
+
 
         textViewWelcome = findViewById(R.id.textview_welcome);
         textViewFullName = findViewById(R.id.textview_full_name);
