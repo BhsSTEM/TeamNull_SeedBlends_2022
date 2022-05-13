@@ -86,11 +86,6 @@ public class Documentation extends AppCompatActivity {
         return true;
     }
 
-    public void launchTrackingPage(MenuItem item) {
-        Intent intent = new Intent(this, Tracking.class);
-        startActivity(intent);
-    }
-
     public void launchFieldPage(MenuItem item) {
         Intent intent = new Intent(this, Field.class);
         startActivity(intent);
