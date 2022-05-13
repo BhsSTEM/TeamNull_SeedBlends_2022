@@ -35,18 +35,6 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-
-
-    public void launchTrackingPage(View view) {
-        Intent intent = new Intent(this, Tracking.class);
-        startActivity(intent);
-    }
-
-    public void launchTrackingPage(MenuItem item) {
-        Intent intent = new Intent(this, Tracking.class);
-        startActivity(intent);
-    }
-
     public void launchFieldPage(View view) {
         Intent intent = new Intent(this, Field.class);
         startActivity(intent);
