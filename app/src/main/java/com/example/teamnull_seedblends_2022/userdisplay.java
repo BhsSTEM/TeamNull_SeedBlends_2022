@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +27,7 @@ public class userdisplay extends AppCompatActivity {
     private ProgressBar progressBar;
     private String name, email;
     private FirebaseAuth authProfile;
+    private ImageView logo;
 
 
     @Override
@@ -34,8 +36,7 @@ public class userdisplay extends AppCompatActivity {
         setContentView(R.layout.activity_userdisplay);
 
         logout = (Button) findViewById(R.id.logoutButton);
-
-      logout.setOnClickListener(new View.OnClickListener() {
+         logout.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
               FirebaseAuth.getInstance().signOut();
@@ -43,6 +44,16 @@ public class userdisplay extends AppCompatActivity {
               // This will logout the user
           }
       });
+
+        logo = (ImageView) findViewById(R.id.Logo1);
+         logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(userdisplay.this, MainActivity.class));
+                // This will redirect back to the home page by just clicking on the logo
+            }
+        });
+
 
 
 
