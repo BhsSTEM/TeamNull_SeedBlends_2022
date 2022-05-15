@@ -120,8 +120,9 @@ public class signUpScreen extends AppCompatActivity implements View.OnClickListe
                                 public void onComplete(@NonNull Task<Void> task) {
 
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(signUpScreen.this, "User has been registered!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(signUpScreen.this, "User has been registered! Please check your email!", Toast.LENGTH_SHORT).show();
                                         registerProgressBar.setVisibility(View.VISIBLE);
+                                        startActivity(new Intent(signUpScreen.this, MainActivity.class));
                                     } else {
                                         Toast.makeText(signUpScreen.this, "Failed to register User!", Toast.LENGTH_SHORT).show();
                                         registerProgressBar.setVisibility(View.GONE);

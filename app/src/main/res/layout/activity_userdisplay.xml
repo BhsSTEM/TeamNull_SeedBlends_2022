@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/black"
+    android:background="@color/black"
     tools:context=".userdisplay">
 
 
@@ -24,7 +26,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Loading..."
-        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,8 +40,8 @@
         android:id="@+id/textview_nameTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name: "
-        android:textColor="@color/black"
+        android:text="Name"
+        android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +55,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Loading..."
-        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,7 +70,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Loading..."
-        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,7 +85,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email: "
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,28 +94,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.463" />
 
+
     <Button
         android:id="@+id/logoutButton"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="512dp"
-        android:backgroundTint="#000000"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="464dp"
+        android:background="@drawable/button_border"
         android:text="Log Out"
-        android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textColor="@color/yellow"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ProgressBar
+     <ProgressBar
         android:id="@+id/textview_progressbar"
-        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="620dp"
+        android:layout_marginTop="596dp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
