@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:background="@color/black">
 
     <EditText
         android:id="@+id/search_documentation"
@@ -13,7 +14,10 @@
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="SEARCH DOCUMENTATION"
+        android:backgroundTint="@color/white"
+        android:textColorHint="@color/white"
         android:inputType="textPersonName"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,7 +47,10 @@
         android:layout_marginBottom="10dp"
         android:ems="10"
         android:hint="Associated Field"
+        android:backgroundTint="@color/white"
+        android:textColorHint="@color/white"
         android:inputType="textPersonName"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/dateEditText"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -52,10 +59,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:backgroundTint="@color/white"
+        android:textColorHint="@color/white"
         android:layout_marginBottom="10dp"
         android:ems="10"
         android:hint="Date"
         android:inputType="textPersonName"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/documentationEditText"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -65,9 +75,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/white"
+        android:textColorHint="@color/white"
         android:ems="10"
         android:hint="Documentation"
         android:inputType="textPersonName"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -76,6 +89,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Insert"
+        android:background="@drawable/button_border"
+        android:textColor="@color/yellow"
         app:layout_constraintBottom_toBottomOf="@+id/documentationEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/associatedFieldEditText"
@@ -85,10 +100,10 @@
         android:id="@+id/searchView"
         android:layout_width="34dp"
         android:layout_height="33dp"
+        android:onClick="filterList"
         app:layout_constraintBottom_toBottomOf="@+id/search_documentation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/search_documentation"
         app:layout_constraintTop_toTopOf="@+id/search_documentation"
-        app:srcCompat="@drawable/ic_baseline_search_24"
-        android:onClick="filterList" />
+        app:srcCompat="@drawable/ic_baseline_search_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>
