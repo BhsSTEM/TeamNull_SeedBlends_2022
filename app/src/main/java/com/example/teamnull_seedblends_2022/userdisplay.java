@@ -33,6 +33,7 @@ public class userdisplay extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_userdisplay);
 
         logout = (Button) findViewById(R.id.logoutButton);
@@ -62,7 +63,7 @@ public class userdisplay extends AppCompatActivity {
         textViewFullName = findViewById(R.id.textview_full_name);
         textViewFullEmail = findViewById(R.id.textview_full_email);
         logout = findViewById(R.id.logoutButton);
-        progressBar = findViewById(R.id.textview_progressbar);
+//        progressBar = findViewById(R.id.textview_progressbar);
 
 
         authProfile = FirebaseAuth.getInstance();
@@ -72,7 +73,7 @@ public class userdisplay extends AppCompatActivity {
         if(firebaseUser == null){
             Toast.makeText(this, "Something went wrong! Pleaes check back later!", Toast.LENGTH_LONG).show();
         } else {
-            progressBar.setVisibility(View.VISIBLE);
+//            progressBar.setVisibility(View.VISIBLE);
             showUserProfile(firebaseUser);
         }
 
@@ -92,7 +93,7 @@ public class userdisplay extends AppCompatActivity {
                 String post = dataSnapshot.getValue(String.class);
                 name = post;
                 textViewFullName.setText(name);
-                textViewWelcome.setText("Hello! " + name + "!");
+                textViewWelcome.setText("Hello, " + name + "!");
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
