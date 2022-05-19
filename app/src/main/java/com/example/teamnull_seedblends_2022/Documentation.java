@@ -13,6 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -40,6 +42,9 @@ public class Documentation extends AppCompatActivity {
         createDocumentationList();
         buildRecyclerView();
 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setTooltipText("Put Application Process, Seed Mix, Seeding Rate, Crop Termination Date, Termination Method");
+
         buttonInsert = findViewById(R.id.insert_documentation);
         associatedFieldEditText = findViewById(R.id.associatedFieldEditText);
         dateEditText = findViewById(R.id.dateEditText);
@@ -64,9 +69,9 @@ public class Documentation extends AppCompatActivity {
 
     public void createDocumentationList() {
         mDocumentationList = new ArrayList<>();
-//        mDocumentationList.add(new DocumentationCard("", "Line 1", "Line 2"));
-//        mDocumentationList.add(new DocumentationCard("", "Line 3", "Line 4"));
-//        mDocumentationList.add(new DocumentationCard("", "Line 5", "Line 6"));
+        mDocumentationList.add(new DocumentationCard("East Field", "5/19/22", "Application Process: Spreader\nSeed Mix: 20% corn, 80% rice\nSeeding Rate: 40 lbs/acre\nCrop Termination Date: 5/18/22\nTermination Method: Chemicals"));
+        mDocumentationList.add(new DocumentationCard("North Field", "5/18/22", "Application Process: Airseeder\nSeed Mix: 50% soybeans, 50% potatoes\nSeeding Rate: 60 lbs/acre\nCrop Termination Date: 5/17/22\nTermination Method: Crimping"));
+        mDocumentationList.add(new DocumentationCard("South Field", "5/17/22", "Application Process: Airseeder\nSeed Mix: 70% corn, 30% tree nuts\nSeeding Rate: 30 lbs/acre\nCrop Termination Date: 5/15/22\nTermination Method: Chemicals"));
     }
 
     public void buildRecyclerView() {
