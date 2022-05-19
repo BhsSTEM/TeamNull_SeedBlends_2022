@@ -12,12 +12,12 @@
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="SEARCH DOCUMENTATION"
-        android:backgroundTint="@color/white"
-        android:textColorHint="@color/white"
         android:inputType="textPersonName"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,12 +45,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="Associated Field"
-        android:backgroundTint="@color/white"
-        android:textColorHint="@color/white"
         android:inputType="textPersonName"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/dateEditText"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -59,13 +59,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:backgroundTint="@color/white"
-        android:textColorHint="@color/white"
         android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="Date"
         android:inputType="textPersonName"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/documentationEditText"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -76,11 +76,11 @@
         android:layout_marginStart="20dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/white"
-        android:textColorHint="@color/white"
         android:ems="10"
         android:hint="Documentation"
         android:inputType="textPersonName"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -88,8 +88,8 @@
         android:id="@+id/insert_documentation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Insert"
         android:background="@drawable/button_border"
+        android:text="Insert"
         android:textColor="@color/yellow"
         app:layout_constraintBottom_toBottomOf="@+id/documentationEditText"
         app:layout_constraintEnd_toEndOf="parent"
@@ -106,4 +106,24 @@
         app:layout_constraintStart_toEndOf="@+id/search_documentation"
         app:layout_constraintTop_toTopOf="@+id/search_documentation"
         app:srcCompat="@drawable/ic_baseline_search_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="56dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="-10dp"
+        android:backgroundTint="@color/yellow"
+        android:clickable="true"
+        android:scaleX="0.4"
+        android:scaleY="0.4"
+        android:tint="#000000"
+        app:borderWidth="0.5dp"
+        app:fabSize="auto"
+        app:layout_constraintBottom_toBottomOf="@+id/documentationEditText"
+        app:layout_constraintStart_toEndOf="@+id/documentationEditText"
+        app:layout_constraintTop_toTopOf="@+id/documentationEditText"
+        app:maxImageSize="50dp"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
