@@ -86,15 +86,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/logInButton"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="440dp"
         android:background="@drawable/button_border"
         android:text="Go"
-        android:textSize="25dp"
         android:textColor="@color/yellow"
+        android:textSize="25dp"
+        app:backgroundTint="@color/yellow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

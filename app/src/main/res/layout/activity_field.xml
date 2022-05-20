@@ -92,8 +92,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enter_field_name" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/new_field"
+        app:backgroundTint="@color/yellow"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -104,8 +105,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/home_ButtonField" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/home_ButtonField"
+        app:backgroundTint="@color/yellow"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"

@@ -7,8 +7,9 @@
     android:background="@color/black"
     tools:context=".MainActivity">
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/field_data"
+        app:backgroundTint="@color/yellow"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
@@ -20,21 +21,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/documentation"
-        android:layout_width="160dp"
+        android:layout_width="170dp"
         android:layout_height="48dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_border"
         android:onClick="launchDocumentationPage"
         android:text="@string/documentation"
         android:textColor="@color/yellow"
+        app:backgroundTint="@color/yellow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/field_data" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/profileDisplay"
+        app:backgroundTint="@color/yellow"
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_marginTop="68dp"

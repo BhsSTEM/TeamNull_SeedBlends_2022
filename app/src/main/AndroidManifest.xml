@@ -10,7 +10,8 @@
         android:label="Docu Seed"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/splashScreenTheme">
+        android:theme="@style/splashScreenTheme"
+        >
         <activity
             android:name=".startuppage"
             android:exported="false" />
