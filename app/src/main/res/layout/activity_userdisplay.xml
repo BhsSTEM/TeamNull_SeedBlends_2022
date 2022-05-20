@@ -95,15 +95,16 @@
         app:layout_constraintVertical_bias="0.463" />
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/logoutButton"
-        android:layout_width="150dp"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="464dp"
         android:background="@drawable/button_border"
         android:text="Log Out"
         android:textColor="@color/yellow"
         android:textSize="25dp"
+        app:backgroundTint="@color/yellow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
